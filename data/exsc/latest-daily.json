@@ -114,6 +114,6 @@
     "key": "exsc",
     "name": "Exclusion Screening",
     "domain": "exclusionscreening.com",
-    "slack_channel": "#robot-threads"
+    "slack_channel": "#marketing-analytics"
   }
 }
