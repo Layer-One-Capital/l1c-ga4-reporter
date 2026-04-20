@@ -1,0 +1,119 @@
+{
+  "mode": "daily",
+  "date": "2026-04-19",
+  "totals": {
+    "totalUsers": "18",
+    "newUsers": "17",
+    "sessions": "18",
+    "screenPageViews": "18",
+    "engagementRate": "0.1111111111111111",
+    "bounceRate": "0.88888888888888884"
+  },
+  "by_channel": [
+    {
+      "sessionDefaultChannelGroup": "Direct",
+      "totalUsers": "14",
+      "sessions": "14",
+      "engagementRate": "0"
+    },
+    {
+      "sessionDefaultChannelGroup": "Organic Search",
+      "totalUsers": "4",
+      "sessions": "4",
+      "engagementRate": "0.5"
+    }
+  ],
+  "by_source": [
+    {
+      "sessionSource": "(direct)",
+      "sessionMedium": "(none)",
+      "totalUsers": "14",
+      "sessions": "14"
+    },
+    {
+      "sessionSource": "google",
+      "sessionMedium": "organic",
+      "totalUsers": "3",
+      "sessions": "3"
+    },
+    {
+      "sessionSource": "bing",
+      "sessionMedium": "organic",
+      "totalUsers": "1",
+      "sessions": "1"
+    }
+  ],
+  "top_pages": [
+    {
+      "pagePath": "/compliance-hotline/",
+      "screenPageViews": "4",
+      "totalUsers": "4"
+    },
+    {
+      "pagePath": "/",
+      "screenPageViews": "3",
+      "totalUsers": "3"
+    },
+    {
+      "pagePath": "/2024/02/28/pennsylvania-exclusion-screening/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    },
+    {
+      "pagePath": "/a-provider-guide-to-new-york-medicaid-exclusion-screening/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    },
+    {
+      "pagePath": "/category/exclusion-screening-basics/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    },
+    {
+      "pagePath": "/different-exclusion-lists/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    },
+    {
+      "pagePath": "/overview-of-the-medi-cal-suspended-and-ineligible-provider-list/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    },
+    {
+      "pagePath": "/pennsylvania-exclusion-screening/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    },
+    {
+      "pagePath": "/screening-the-social-security-death-master-file/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    },
+    {
+      "pagePath": "/state-exclusion-databases-medicaid-exclusion/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    },
+    {
+      "pagePath": "/tag/assisted-living-facility-exclusion-action/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    },
+    {
+      "pagePath": "/tag/billing/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    },
+    {
+      "pagePath": "/tag/nursing/",
+      "screenPageViews": "1",
+      "totalUsers": "1"
+    }
+  ],
+  "property": {
+    "key": "exsc",
+    "name": "Exclusion Screening",
+    "domain": "exclusionscreening.com",
+    "slack_channel": "#robot-threads"
+  }
+}

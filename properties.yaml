@@ -1,0 +1,6 @@
+properties:
+  exsc:
+    property_id: "396272072"
+    name: "Exclusion Screening"
+    domain: "exclusionscreening.com"
+    slack_channel: "#robot-threads"

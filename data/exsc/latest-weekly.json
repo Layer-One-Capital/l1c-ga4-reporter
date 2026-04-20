@@ -1,0 +1,387 @@
+{
+  "mode": "weekly",
+  "period": {
+    "start": "2026-04-13",
+    "end": "2026-04-19"
+  },
+  "prev_period": {
+    "start": "2026-04-06",
+    "end": "2026-04-12"
+  },
+  "totals": {
+    "totalUsers": "458",
+    "newUsers": "390",
+    "sessions": "577",
+    "screenPageViews": "786",
+    "engagementRate": "0.41941074523396882",
+    "bounceRate": "0.58058925476603118"
+  },
+  "prev_totals": {
+    "totalUsers": "515",
+    "newUsers": "389",
+    "sessions": "742",
+    "screenPageViews": "1122",
+    "engagementRate": "0.42452830188679247",
+    "bounceRate": "0.57547169811320753"
+  },
+  "by_day": [
+    {
+      "date": "20260413",
+      "totalUsers": "124",
+      "sessions": "144"
+    },
+    {
+      "date": "20260415",
+      "totalUsers": "98",
+      "sessions": "110"
+    },
+    {
+      "date": "20260414",
+      "totalUsers": "94",
+      "sessions": "104"
+    },
+    {
+      "date": "20260416",
+      "totalUsers": "74",
+      "sessions": "86"
+    },
+    {
+      "date": "20260417",
+      "totalUsers": "72",
+      "sessions": "83"
+    },
+    {
+      "date": "20260418",
+      "totalUsers": "32",
+      "sessions": "34"
+    },
+    {
+      "date": "20260419",
+      "totalUsers": "18",
+      "sessions": "18"
+    }
+  ],
+  "by_channel": [
+    {
+      "sessionDefaultChannelGroup": "Direct",
+      "totalUsers": "312",
+      "sessions": "386",
+      "engagementRate": "0.33678756476683935"
+    },
+    {
+      "sessionDefaultChannelGroup": "Organic Search",
+      "totalUsers": "105",
+      "sessions": "131",
+      "engagementRate": "0.56488549618320616"
+    },
+    {
+      "sessionDefaultChannelGroup": "Referral",
+      "totalUsers": "18",
+      "sessions": "27",
+      "engagementRate": "0.48148148148148145"
+    },
+    {
+      "sessionDefaultChannelGroup": "Email",
+      "totalUsers": "16",
+      "sessions": "27",
+      "engagementRate": "0.7407407407407407"
+    },
+    {
+      "sessionDefaultChannelGroup": "Organic Social",
+      "totalUsers": "6",
+      "sessions": "6",
+      "engagementRate": "0.83333333333333337"
+    },
+    {
+      "sessionDefaultChannelGroup": "Cross-network",
+      "totalUsers": "1",
+      "sessions": "1",
+      "engagementRate": "0"
+    },
+    {
+      "sessionDefaultChannelGroup": "Paid Search",
+      "totalUsers": "1",
+      "sessions": "1",
+      "engagementRate": "0"
+    }
+  ],
+  "by_source": [
+    {
+      "sessionSource": "(direct)",
+      "sessionMedium": "(none)",
+      "totalUsers": "312",
+      "sessions": "386"
+    },
+    {
+      "sessionSource": "google",
+      "sessionMedium": "organic",
+      "totalUsers": "68",
+      "sessions": "88"
+    },
+    {
+      "sessionSource": "bing",
+      "sessionMedium": "organic",
+      "totalUsers": "31",
+      "sessions": "36"
+    },
+    {
+      "sessionSource": "hs_email",
+      "sessionMedium": "email",
+      "totalUsers": "10",
+      "sessions": "17"
+    },
+    {
+      "sessionSource": "hs_automation",
+      "sessionMedium": "email",
+      "totalUsers": "6",
+      "sessions": "10"
+    },
+    {
+      "sessionSource": "facebook.com",
+      "sessionMedium": "referral",
+      "totalUsers": "4",
+      "sessions": "4"
+    },
+    {
+      "sessionSource": "statics.teams.cdn.office.net",
+      "sessionMedium": "referral",
+      "totalUsers": "4",
+      "sessions": "4"
+    },
+    {
+      "sessionSource": "duckduckgo",
+      "sessionMedium": "organic",
+      "totalUsers": "3",
+      "sessions": "3"
+    },
+    {
+      "sessionSource": "chatgpt.com",
+      "sessionMedium": "referral",
+      "totalUsers": "2",
+      "sessions": "3"
+    },
+    {
+      "sessionSource": "claude.ai",
+      "sessionMedium": "referral",
+      "totalUsers": "2",
+      "sessions": "3"
+    },
+    {
+      "sessionSource": "google",
+      "sessionMedium": "cpc",
+      "totalUsers": "2",
+      "sessions": "2"
+    },
+    {
+      "sessionSource": "namas.co",
+      "sessionMedium": "referral",
+      "totalUsers": "2",
+      "sessions": "2"
+    },
+    {
+      "sessionSource": "yahoo",
+      "sessionMedium": "organic",
+      "totalUsers": "2",
+      "sessions": "3"
+    },
+    {
+      "sessionSource": "advisorsexcelllc.sharepoint.com",
+      "sessionMedium": "referral",
+      "totalUsers": "1",
+      "sessions": "1"
+    },
+    {
+      "sessionSource": "aws-crm.lightning.force.com",
+      "sessionMedium": "referral",
+      "totalUsers": "1",
+      "sessions": "2"
+    },
+    {
+      "sessionSource": "blue.bbb.org",
+      "sessionMedium": "referral",
+      "totalUsers": "1",
+      "sessions": "2"
+    },
+    {
+      "sessionSource": "credenzahealth.com",
+      "sessionMedium": "referral",
+      "totalUsers": "1",
+      "sessions": "2"
+    },
+    {
+      "sessionSource": "heartlanddental.sharepoint.com",
+      "sessionMedium": "referral",
+      "totalUsers": "1",
+      "sessions": "5"
+    },
+    {
+      "sessionSource": "linkedin.com",
+      "sessionMedium": "referral",
+      "totalUsers": "1",
+      "sessions": "1"
+    },
+    {
+      "sessionSource": "reddit.com",
+      "sessionMedium": "referral",
+      "totalUsers": "1",
+      "sessions": "1"
+    },
+    {
+      "sessionSource": "search.nortonsafesearch.com",
+      "sessionMedium": "referral",
+      "totalUsers": "1",
+      "sessions": "1"
+    },
+    {
+      "sessionSource": "usc-word-edit.officeapps.live.com",
+      "sessionMedium": "referral",
+      "totalUsers": "1",
+      "sessions": "1"
+    },
+    {
+      "sessionSource": "www-p504.intacct.com",
+      "sessionMedium": "referral",
+      "totalUsers": "1",
+      "sessions": "1"
+    },
+    {
+      "sessionSource": "yandex",
+      "sessionMedium": "organic",
+      "totalUsers": "1",
+      "sessions": "1"
+    }
+  ],
+  "top_pages": [
+    {
+      "pagePath": "/",
+      "screenPageViews": "181",
+      "totalUsers": "146"
+    },
+    {
+      "pagePath": "/state-exclusion-databases-medicaid-exclusion/",
+      "screenPageViews": "180",
+      "totalUsers": "111"
+    },
+    {
+      "pagePath": "/systems-login/",
+      "screenPageViews": "71",
+      "totalUsers": "29"
+    },
+    {
+      "pagePath": "/compliance-hotline/",
+      "screenPageViews": "42",
+      "totalUsers": "40"
+    },
+    {
+      "pagePath": "/systemlogin/",
+      "screenPageViews": "26",
+      "totalUsers": "13"
+    },
+    {
+      "pagePath": "/onboarding-safer-plus/",
+      "screenPageViews": "22",
+      "totalUsers": "9"
+    },
+    {
+      "pagePath": "/exclusion-screening/",
+      "screenPageViews": "21",
+      "totalUsers": "17"
+    },
+    {
+      "pagePath": "/pennsylvania-exclusion-screening/",
+      "screenPageViews": "20",
+      "totalUsers": "14"
+    },
+    {
+      "pagePath": "/glossary/",
+      "screenPageViews": "12",
+      "totalUsers": "10"
+    },
+    {
+      "pagePath": "/pricing/",
+      "screenPageViews": "12",
+      "totalUsers": "8"
+    },
+    {
+      "pagePath": "/about/",
+      "screenPageViews": "11",
+      "totalUsers": "10"
+    },
+    {
+      "pagePath": "/contact/",
+      "screenPageViews": "8",
+      "totalUsers": "6"
+    },
+    {
+      "pagePath": "/request-access/",
+      "screenPageViews": "8",
+      "totalUsers": "6"
+    },
+    {
+      "pagePath": "/what-does-it-mean-to-be-on-an-exclusion-list/",
+      "screenPageViews": "7",
+      "totalUsers": "4"
+    },
+    {
+      "pagePath": "/contractor-vendor-screening/",
+      "screenPageViews": "6",
+      "totalUsers": "5"
+    },
+    {
+      "pagePath": "/how-it-works/",
+      "screenPageViews": "6",
+      "totalUsers": "6"
+    },
+    {
+      "pagePath": "/providers-guide-to-oig-exclusions/",
+      "screenPageViews": "6",
+      "totalUsers": "6"
+    },
+    {
+      "pagePath": "/schedule-a-demo/",
+      "screenPageViews": "6",
+      "totalUsers": "5"
+    },
+    {
+      "pagePath": "/systems-login-v1/",
+      "screenPageViews": "6",
+      "totalUsers": "4"
+    },
+    {
+      "pagePath": "/category/exclusion-screening-basics/",
+      "screenPageViews": "5",
+      "totalUsers": "5"
+    },
+    {
+      "pagePath": "/faq-safer-plus/",
+      "screenPageViews": "5",
+      "totalUsers": "3"
+    },
+    {
+      "pagePath": "/portal/hub-page/",
+      "screenPageViews": "5",
+      "totalUsers": "2"
+    },
+    {
+      "pagePath": "/what-we-do/",
+      "screenPageViews": "5",
+      "totalUsers": "5"
+    },
+    {
+      "pagePath": "/cmp-report/",
+      "screenPageViews": "4",
+      "totalUsers": "3"
+    },
+    {
+      "pagePath": "/different-exclusion-lists/",
+      "screenPageViews": "4",
+      "totalUsers": "3"
+    }
+  ],
+  "property": {
+    "key": "exsc",
+    "name": "Exclusion Screening",
+    "domain": "exclusionscreening.com",
+    "slack_channel": "#robot-threads"
+  }
+}
