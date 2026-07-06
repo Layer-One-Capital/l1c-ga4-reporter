@@ -330,6 +330,42 @@
       "totalUsers": "3"
     }
   ],
+  "ai_referrals": [
+    {
+      "sessionSource": "chatgpt.com",
+      "sessionMedium": "ai-assistant",
+      "totalUsers": "5",
+      "sessions": "6"
+    },
+    {
+      "sessionSource": "claude.ai",
+      "sessionMedium": "ai-assistant",
+      "totalUsers": "1",
+      "sessions": "1"
+    }
+  ],
+  "conversions": {
+    "form_submissions": 5,
+    "forms_by_page": [
+      {
+        "pagePath": "/glossary/",
+        "count": 2
+      },
+      {
+        "pagePath": "/",
+        "count": 1
+      },
+      {
+        "pagePath": "/contact/",
+        "count": 1
+      },
+      {
+        "pagePath": "/indiana-medicaid-exclusion-list/",
+        "count": 1
+      }
+    ],
+    "meetings_requested": 12
+  },
   "property": {
     "key": "exsc",
     "name": "Exclusion Screening",
