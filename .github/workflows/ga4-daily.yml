@@ -2,8 +2,8 @@ name: GA4 Daily Report
 
 on:
   schedule:
-    # 11:00 UTC = 7:00 America/New_York (EDT). Mon-Sat only.
-    - cron: '0 11 * * 1-6'
+    # 07:00 UTC = 3:00 America/New_York (EDT). Mon-Sat. Reader posts 11:00 UTC (4h gap).
+    - cron: '0 7 * * 1-6'
   workflow_dispatch:
 
 jobs:
