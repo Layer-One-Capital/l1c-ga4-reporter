@@ -143,6 +143,12 @@
       "totalUsers": "1"
     }
   ],
+  "ai_referrals": [],
+  "conversions": {
+    "form_submissions": 0,
+    "forms_by_page": [],
+    "meetings_requested": 0
+  },
   "property": {
     "key": "exsc",
     "name": "Exclusion Screening",
