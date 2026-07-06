@@ -32,6 +32,44 @@ DAILY_METRICS = [
     "bounceRate",
 ]
 
+# Session-source substrings that identify AI-assistant referral traffic
+# (ChatGPT, Claude, Perplexity, Gemini, Copilot, etc.). Matched case-
+# insensitively against sessionSource. Keep domains specific so we don't
+# swallow regular Google/Bing organic (e.g. use "gemini.google.com", not
+# "google.com").
+AI_REFERRAL_SOURCES = [
+    "chatgpt.com",
+    "openai.com",
+    "perplexity.ai",
+    "claude.ai",
+    "anthropic.com",
+    "gemini.google.com",
+    "bard.google.com",
+    "copilot.microsoft.com",
+    "you.com",
+    "poe.com",
+    "phind.com",
+    "deepseek.com",
+    "grok.com",
+    "meta.ai",
+    "mistral.ai",
+]
+
+
+def extract_ai_referrals(by_source):
+    """Return the subset of by_source rows that came from AI assistants.
+
+    Derived from the already-fetched by_source rows (no extra API call),
+    sorted by totalUsers descending. May be an empty list.
+    """
+    rows = []
+    for r in by_source:
+        src = (r.get("sessionSource") or "").lower()
+        if any(marker in src for marker in AI_REFERRAL_SOURCES):
+            rows.append(r)
+    rows.sort(key=lambda x: int(x.get("totalUsers") or 0), reverse=True)
+    return rows
+
 
 def load_client() -> BetaAnalyticsDataClient:
     raw = os.environ.get("GA4_SERVICE_ACCOUNT_JSON")
@@ -84,6 +122,7 @@ def daily_report(client, property_id):
         "by_channel": by_channel,
         "by_source": by_source,
         "top_pages": top_pages,
+        "ai_referrals": extract_ai_referrals(by_source),
     }
 
 
@@ -121,6 +160,7 @@ def weekly_report(client, property_id):
         "by_channel": by_channel,
         "by_source": by_source,
         "top_pages": top_pages,
+        "ai_referrals": extract_ai_referrals(by_source),
     }
 
 
