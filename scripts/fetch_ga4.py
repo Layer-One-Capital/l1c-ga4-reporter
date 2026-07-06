@@ -17,6 +17,8 @@ from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import (
     DateRange,
     Dimension,
+    Filter,
+    FilterExpression,
     Metric,
     RunReportRequest,
 )
@@ -71,6 +73,61 @@ def extract_ai_referrals(by_source):
     return rows
 
 
+# Lead-conversion events worth reporting. `form_submit` is GA4's automatic
+# enhanced-measurement event and fires on the page holding the form, so its
+# pagePath tells us WHICH form. `meeting_booked` is the custom event that
+# fires when someone requests a demo on /schedule-a-demo/. Other "key events"
+# on this property (click, quote_page, services_page, generate_lead(s),
+# form_submission) are page-views/clicks or duplicates and are intentionally
+# excluded to avoid inflated/double-counted conversions.
+FORM_SUBMIT_EVENT = "form_submit"
+MEETING_EVENT = "meeting_booked"
+
+
+def conversions_report(client, property_id, start, end):
+    """Count form submissions (with the page each form lives on) and
+    demo/meeting requests for the window. Returns a dict with totals and a
+    per-form breakdown; zeros/empty when nothing converted."""
+    flt = FilterExpression(
+        filter=Filter(
+            field_name="eventName",
+            in_list_filter=Filter.InListFilter(
+                values=[FORM_SUBMIT_EVENT, MEETING_EVENT]
+            ),
+        )
+    )
+    req = RunReportRequest(
+        property=f"properties/{property_id}",
+        date_ranges=[DateRange(start_date=start, end_date=end)],
+        dimensions=[Dimension(name="eventName"), Dimension(name="pagePath")],
+        metrics=[Metric(name="eventCount")],
+        dimension_filter=flt,
+        limit=250,
+    )
+    resp = client.run_report(req)
+    forms_by_page = {}
+    form_total = 0
+    meetings = 0
+    for row in resp.rows:
+        ev = row.dimension_values[0].value
+        page = row.dimension_values[1].value
+        cnt = int(row.metric_values[0].value)
+        if ev == MEETING_EVENT:
+            meetings += cnt
+        elif ev == FORM_SUBMIT_EVENT:
+            form_total += cnt
+            forms_by_page[page] = forms_by_page.get(page, 0) + cnt
+    forms = [
+        {"pagePath": p, "count": c}
+        for p, c in sorted(forms_by_page.items(), key=lambda kv: kv[1], reverse=True)
+    ]
+    return {
+        "form_submissions": form_total,
+        "forms_by_page": forms,
+        "meetings_requested": meetings,
+    }
+
+
 def load_client() -> BetaAnalyticsDataClient:
     raw = os.environ.get("GA4_SERVICE_ACCOUNT_JSON")
     if not raw:
@@ -123,6 +180,7 @@ def daily_report(client, property_id):
         "by_source": by_source,
         "top_pages": top_pages,
         "ai_referrals": extract_ai_referrals(by_source),
+        "conversions": conversions_report(client, property_id, yesterday, yesterday),
     }
 
 
@@ -161,6 +219,7 @@ def weekly_report(client, property_id):
         "by_source": by_source,
         "top_pages": top_pages,
         "ai_referrals": extract_ai_referrals(by_source),
+        "conversions": conversions_report(client, property_id, start, end),
     }
 
 
